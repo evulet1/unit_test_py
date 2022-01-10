@@ -19,3 +19,7 @@ class TestFunctions(TestCase):
         divisor = 5
         expected_result = 0
         self.assertAlmostEqual(divide(divident,divisor), expected_result)
+
+    def test_divide_error_on_zero(self):
+        with self.assertRaises(ValueError):
+            divide(25, 0)
